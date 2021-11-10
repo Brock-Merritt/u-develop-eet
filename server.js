@@ -2,6 +2,8 @@ const express = require('express');
 const db = require('./db/connection');
 const inputCheck = require('./utils/inputCheck');
 const apiRoutes = require('./routes/apiRoutes');
+const router = require('./routes/apiRoutes');
+router.use(require('./voterRoutes'));
 
 const PORT = process.env.PORT || 3001;
 const app = express();
